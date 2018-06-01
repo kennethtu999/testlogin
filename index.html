@@ -1,3 +1,4 @@
+<html>
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -6,9 +7,36 @@
   <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
   <link href="common.css" rel="stylesheet">
   <!------ Include the above in your HEAD tag ---------->
-</head
-<a id="login" href="#">Login</a>
 
+
+  <script >
+
+  $(function() {
+    $("#login").on('click',function() {
+      $("#login-modal").modal('show');
+    });
+
+    $(function() {
+      $("#login").on('click',function() {
+        $("#login-modal").modal('show');
+        $("#submitlogin").off("click").on('click', function() {
+          $("#pass").val($("#pass").val() + "E2E");
+          $("#loginform").submit();
+        })
+      });
+
+    })
+  })
+
+  </script>
+</head>
+<body>
+</p>
+<center>
+  <h3>
+<a id="login" href="#">登入</a>
+</h3>
+</center>
 <div class="modal fade" id="login-modal" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
     	  <div class="modal-dialog">
 				<div class="loginmodal-container">
@@ -26,23 +54,5 @@
 			</div>
 		  </div>
 
-<script >
-
-$(function() {
-  $("#login").on('click',function() {
-    $("#login-modal").modal('show');
-  });
-
-  $(function() {
-    $("#login").on('click',function() {
-      $("#login-modal").modal('show');
-      $("#submitlogin").off("click").on('click', function() {
-        $("#pass").val($("#pass").val() + "E2E");
-        $("#loginform").submit();
-      })
-    });
-
-  })
-})
-
-</script>
+</body>
+</html>
